@@ -3,8 +3,10 @@ const validation = document.querySelector('#validation-input');
 validation.addEventListener('blur', onValidationCheck);
 
 function onValidationCheck(event) {
-    validation.classList.add(`invalid`);
+    
     if (event.currentTarget.value.length === Number(validation.dataset.length)) {
-        validation.classList.replace(`invalid`, `valid`);
-    } 
+        validation.classList.replace(`valid`);
+    } else {
+        validation.classList.add(`invalid`);
+    }
 }
