@@ -14,7 +14,7 @@ function onCreateBtn(event) {
   for (let i = 0; i < amount; i += 1){
     const size = initialBoxSize + i * 10;
     const colorBox = getRandomHexColor();
-    markUp += `<div style='width:${size}px; height:${size}px; background-color:${colorBox};'>`;
+    markUp += `<div style='width:${size}px; height:${size}px; background-color:${colorBox};'></div>`;
 
   }
 
