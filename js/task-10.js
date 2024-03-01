@@ -8,6 +8,9 @@ destroyBtn.addEventListener('click', onDestroyBtn);
 
 function onCreateBtn(event) {
   const amount = input.value;
+  if (amount <= 0) {
+    return;
+  }
   const initialBoxSize = 30;
   let markUp = '';
   
