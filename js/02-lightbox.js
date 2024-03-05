@@ -29,7 +29,7 @@ function onMouseClick(event) {
     }
 
     const lightBox = new SimpleLightbox('.gallery a', {
-        captionData: 'alt',
+        captionsData: 'alt',
         captionDelay: 250,
         captionType: 'alt',
         captionPosition: 'bottom',
