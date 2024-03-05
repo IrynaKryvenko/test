@@ -34,6 +34,6 @@ function onMouseClick(event) {
         captionType: 'alt',
         captionPosition: 'bottom',
     });
-}
-
+  
 console.log(galleryItems);
+}
