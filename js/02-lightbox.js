@@ -19,11 +19,21 @@ function createGalleryMarkup(galleryItems) {
     }).join('');
 }
 
-console.log(galleryItems);
+galleryList.addEventListener('click', onMouseClick);
 
-const lightBox = new SimpleLightbox('.gallery a', {
-    captionData: 'alt',
-    captionDelay: 250,
-    captionType: 'alt',
-    captionPosition: 'bottom',
-});
+function onMouseClick(event) {
+    event.preventDefault();
+    if (event.target.nodeName !== 'IMG') {
+        return;
+    
+    }
+
+    const lightBox = new SimpleLightbox('.gallery a', {
+        captionData: 'alt',
+        captionDelay: 250,
+        captionType: 'alt',
+        captionPosition: 'bottom',
+    });
+}
+
+console.log(galleryItems);
