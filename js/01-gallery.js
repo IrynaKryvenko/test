@@ -27,24 +27,25 @@ galleryList.addEventListener('click', onMouseClick);
 
 function onMouseClick(event) {
     event.preventDefault();
-    if (event.target.nodeName !== 'IMG')
-        return;   
-}
-
-const instance = basicLightbox.create(
-    `<img src = '${event.target.dataset.source}'>`,
-    {
-        onShow: (instance) => {
-            document.addEventListener('keydown', onCloseEscape);
-        },
-        onClose: (instance) => {
-            document.removeEventListener('keydown', onCloseEscape);
-        },
+    if (event.target.nodeName !== 'IMG') {
+        return;
+    
     }
 
-);
-instance.show();
+    const instance = basicLightbox.create(
+        `<img src = '${event.target.dataset.source}'>`,
+        {
+            onShow: (instance) => {
+                document.addEventListener('keydown', onCloseEscape);
+            },
+            onClose: (instance) => {
+                document.removeEventListener('keydown', onCloseEscape);
+            },
+        }
 
+    );
+    instance.show();
+}
 function onCloseEscape(evt) {
     if (evt.code === 'Escape') {
         instance.close();
