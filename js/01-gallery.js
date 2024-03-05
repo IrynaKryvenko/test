@@ -45,11 +45,10 @@ function onMouseClick(event) {
 
     );
     instance.show();
-}
-function onCloseEscape(evt) {
-    if (evt.code === 'Escape') {
-        instance.close();
+    function onCloseEscape(evt) {
+        if (evt.code === 'Escape') {
+            instance.close();
+        };
     };
 };
-
 
